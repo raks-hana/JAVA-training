@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Task5</title>
+    </head>
+    <body>
+        <h1>Movie plan</h1>
+        <h2>Are you going to the film today?</h2>
+        <button onclick="yes()">Movie plan</button>
+        <script>
+            function yes() {
+            const userResponse = confirm("Are you going to the film today?");
+            if (userResponse) {
+                alert("Great! Enjoy your movie!");
+            } else {
+                alert("Maybe another day then!");
+            }
+        }
+        </script>
+    </body>
+</html>
