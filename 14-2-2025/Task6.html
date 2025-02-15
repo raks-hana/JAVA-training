@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Prompt</h2>
+
+<button onclick="ageFunction()">Press</button>
+<p id="demo"></p>
+<script>
+function ageFunction() {
+  let text;
+  let age = prompt("Please enter your age:");
+  if (age == null || age == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = "Your age is: "+age;
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+</body>
+</html>
