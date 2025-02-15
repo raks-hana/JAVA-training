@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h2>JavaScript alert</h2>
+        <button onclick="press()">Press</button>
+        <script>
+            function press(){
+                let address = prompt("Please enter your address:", "22g Baker st.");
+                if (address) {
+                    alert("Your address is "+address)
+                }else{
+                    alert("Type your address")
+                }
+            }
+        </script>
+    </body>
+</html>
