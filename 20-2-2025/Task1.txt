@@ -1,0 +1,93 @@
+//Login(HTML):
+package servlet;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+@WebServlet("/Login")
+public class Login extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+     
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	response.setContentType("text/html");      
+       PrintWriter pwriter = response.getWriter(); 
+	       pwriter.println("<html><body>");
+	       pwriter.println("<form action='loginform' method='post'>");
+	       pwriter.println("Username: <input type='text' name='uname'/> <br/>");
+	       pwriter.println("Password: <input type='password' name='upass'/> <br/>");
+	       pwriter.println("<input type='submit' value='SUBMIT'/>");
+	       pwriter.println("</form>");
+	       pwriter.println("</body></html>");
+	}
+}
+
+//Login form:
+package servlet;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+@WebServlet("/loginform")
+public class loginform extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    public loginform() {
+        super();
+    }
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html");      
+	       PrintWriter pwriter = response.getWriter();                
+	       String name=request.getParameter("uname");      
+	       String pass=request.getParameter("upass");
+	       if(name.equals("anya") && 
+	          pass.equals("bbbb"))
+	       {          
+	          RequestDispatcher dis=request.getRequestDispatcher("WelcomeUser");          
+	          dis.forward(request, response);      
+	       }
+	       else
+	       {      
+	          pwriter.print("User name or password is incorrect!");          
+	          RequestDispatcher dis=request.getRequestDispatcher("FirstTry.html");          
+	          dis.include(request, response);                                
+	       }
+	}
+}
+
+//Welcome Page:
+package servlet;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class Welcome extends HttpServlet {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        HttpSession session = request.getSession();
+        String user = (String)session.getAttribute("user");
+        out.println("Hello "+user);
+    }
+}
+
+
+
+
