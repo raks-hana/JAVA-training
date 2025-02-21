@@ -1,0 +1,78 @@
+//index.html:
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Task2</title>
+</head>
+<body>
+ <h1>A Simple Servlet</h1> 
+  <p>This is a static webpage.</p>
+  <p>Now try the  <a href="Counter">Counter Servlet</a></p> 
+  <p>Here is a <a href="JSPCount"> Simple JSP (Java Servlet Page)</a></p>
+</body>
+</html>
+
+//Counter.java:
+package servlet;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+
+@WebServlet("/Counter")
+public class Counter extends HttpServlet {
+	 int accesses = 0;
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		 response.setContentType("text/html");
+	        PrintWriter out = response.getWriter();
+	        accesses++;
+	        out.print("Number of times this servlet has been accessed:" + accesses);
+	}
+}
+
+//JSPCount.jsp:
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%!
+ public static int accesses = 0;
+%>
+<h1>JSP Example (jspcount.jsp)</h1>
+<%
+  accesses++;
+  out.print("<p>Number of times this JSP has been accessed:" + accesses + "</p>");
+%>
+</body>
+</html>
+
+//web.xml:
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+	version="6.0">
+	
+<servlet>
+   <servlet-name>JSPCount.jsp</servlet-name>
+   <jsp-file>/JSPCount.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+   <servlet-name>JSPCount.jsp</servlet-name>
+   <url-pattern>/JSPCount/*</url-pattern>
+</servlet-mapping>
+	
+</web-app>
