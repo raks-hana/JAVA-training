@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>React</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/jsx">
+    function Vowels(){
+        return ['a', 'e', 'i', 'o', 'u'];
+    }
+    function IsVowel({vowels}){
+        return <h1>The String contain vowel(s): {vowels.join(', ')}</h1> 
+    }
+    function IsNotVowel(){
+        return <h1>The String does not contain vowel(s)</h1> 
+    }
+    function CheckVowel(props){
+        const isStr = props.str;
+        const vowels = Vowels();
+        let foundVowels = [];
+        for (let i = 0; i < isStr.length; i++) {
+            if (vowels.includes(isStr[i].toLowerCase()) && !foundVowels.includes(isStr[i].toLowerCase())) 
+            {
+                foundVowels.push(isStr[i].toLowerCase());
+            }
+        }
+        return foundVowels.length > 0 && <IsVowel vowels={foundVowels} /> || <IsNotVowel />;
+    }
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<CheckVowel str="Hello" />);
+</script>
+</body>
+</html>
+

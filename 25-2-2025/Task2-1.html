@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>React</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/jsx">
+    function IsEven(){
+        return <h1>The String length is Even</h1> 
+    }
+    function IsOdd(){
+        return <h1>The String length is Odd</h1> 
+    }
+    function CheckString(props){
+        const isStr = props.str;
+        if(isStr.length%2==0){
+        return <IsEven />;
+        }
+        return <IsOdd />;
+    }
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<CheckString str="hello" />);
+</script>
+</body>
+</html>
+

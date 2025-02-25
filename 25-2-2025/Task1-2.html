@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>React</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/jsx">
+    function CheckNumber(props){
+        const isNum = props.num;
+        return(
+            <>
+            <h1>Number is </h1>
+            {isNum%13==0 && <h2> Divisible </h2>}
+            {isNum%13!=0 && <h2> Not Divisible </h2>}
+            </>
+        );
+    }
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<CheckNumber num={169} />);
+</script>
+</body>
+</html>
+
