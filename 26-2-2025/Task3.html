@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>React</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/jsx">
+    function StudentList() {
+        const students = [
+            { name: "Akashi", department: "Computer Science" },
+            { name: "Bali", department: "Mechanical Engineering" },
+            { name: "Carden", department: "Electrical Engineering" },
+            { name: "Davis", department: "Civil Engineering" }
+        ];
+        return (
+            <div>
+                <h1>List of Students:</h1>
+                <ul>
+                    {students.map((student, index) => (
+                        <li key={index}>
+                            {student.name} - {student.department}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        );
+    }
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<StudentList />);
+</script>
+</body>
+</html>
