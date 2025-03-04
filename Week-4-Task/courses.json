@@ -1,0 +1,5 @@
+[
+    { "title": "Full Stack Developer", "instructor": "Dhalia Merch", "category": "Programming", "image":"/Images/FullStack.jpg" },
+    { "title": "AI Introduction", "instructor": "Austin Smith", "category": "Data Science", "image":"/Images/ai.jpg" },
+    { "title": "UI/UX Design", "instructor": "Alice Varghese", "category": "Design", "image":"/Images/ui-ux.jpg" }
+]
