@@ -1,0 +1,14 @@
+.book-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-bottom: 10px;
+  }
+  
+  .book-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-details {
+    margin-top: 10px;
+  }
+  

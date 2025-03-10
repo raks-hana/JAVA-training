@@ -1,0 +1,103 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "price": 10.99,
+      "image": "gatsby.jpg",
+      "description": "A story of the mysterious Jay Gatsby and his obsession with Daisy Buchanan, set in the Roaring Twenties.",
+      "genre": "romance"
+    },
+    {
+      "id": "2",
+      "title": "1984",
+      "author": "George Orwell",
+      "price": 8.99,
+      "image": "1984.jpg",
+      "description": "A dystopian novel set in a totalitarian society controlled by the Party and its leader, Big Brother.",
+      "genre": "thriller"
+    },
+    {
+      "id": "3",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "price": 12.5,
+      "image": "mockingbird.jpg",
+      "description": "A classic of modern American literature that explores the racial injustice in the Deep South during the 1930s.",
+      "genre": "history"
+    },
+    {
+      "id": "4",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "price": 9.99,
+      "image": "pride-prejudice.jpg",
+      "description": "A romantic novel that explores the themes of class, marriage, and societal expectations in early 19th-century England.",
+      "genre": "romance"
+    },
+    {
+      "id": "5",
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "price": 11.99,
+      "image": "catcher.jpg",
+      "description": "The story of Holden Caulfield, a teenager struggling with isolation, identity, and the disillusionment of adulthood.",
+      "genre": "thriller"
+    },
+    {
+      "id": "6",
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "price": 14.99,
+      "image": "hobbit.jpg",
+      "description": "A fantasy novel following Bilbo Baggins on his adventure to reclaim treasure guarded by the dragon Smaug.",
+      "genre": "fantasy"
+    },
+    {
+      "id": "7",
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "author": "J.K. Rowling",
+      "price": 15.99,
+      "image": "harry-potter.jpg",
+      "description": "The first book in the Harry Potter series, where Harry discovers he is a wizard and begins his adventure at Hogwarts.",
+      "genre": "fantasy"
+    },
+    {
+      "id": "8",
+      "title": "The Hunger Games",
+      "author": "Suzanne Collins",
+      "price": 13.99,
+      "image": "hunger-games.jpg",
+      "description": "A dystopian novel set in a future society where children are forced to fight to the death in a televised event.",
+      "genre": "action"
+    },
+    {
+      "id": "9",
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "author": "J.R.R. Tolkien",
+      "price": 18.99,
+      "image": "fellowship.jpg",
+      "description": "The first book in the epic Lord of the Rings trilogy, where Frodo Baggins embarks on a journey to destroy the One Ring.",
+      "genre": "fantasy"
+    },
+    {
+      "id": "10",
+      "title": "The Da Vinci Code",
+      "author": "Dan Brown",
+      "price": 16.5,
+      "image": "davinci-code.jpg",
+      "description": "A mystery thriller that explores secrets hidden in the works of Leonardo da Vinci and a conspiracy surrounding the Catholic Church.",
+      "genre": "thriller"
+    }
+  ],
+  "enquiries": [
+    {
+      "id": "80ba",
+      "name": "abcd ",
+      "email": "abcd@email.com",
+      "message": "I want this book",
+      "bookId": 2
+    }
+  ]
+}

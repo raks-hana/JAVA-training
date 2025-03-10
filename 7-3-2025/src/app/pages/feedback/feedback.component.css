@@ -1,0 +1,34 @@
+/* Card styling */
+.card {
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;  /* Ensures proper layout of the content inside the card */
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+  flex-grow: 1; /* Allows text to grow and fill space */
+}
+
+.blockquote-footer {
+  font-size: 0.8rem;
+  color: #777;
+  text-align: right;
+  margin-top: auto;  /* Pushes the footer to the bottom of the card */
+}
+
+/* Adjusting the feedback container and spacing */
+.container.mt-3 {
+  padding-bottom: 50px;  /* Ensures space at the bottom of the page */
+}
+
+/* Add margin between cards */
+.mb-3 {
+  margin-bottom: 1rem;
+}

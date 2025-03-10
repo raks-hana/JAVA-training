@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Makes the container take the full height of the viewport */
+    margin-top: 0; /* Remove the top margin, adjust if needed */
+    margin-bottom: 100; /* Remove bottom margin */
+}
