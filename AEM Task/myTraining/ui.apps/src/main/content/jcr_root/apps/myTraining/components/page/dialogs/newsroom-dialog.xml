@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dialog xmlns="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:cq="http://www.day.com/xml/ns/jcr/cq"
+        jcr:primaryType="cq:Dialog">
+    <content>
+        <items jcr:primaryType="cq:WidgetCollection">
+            <newsImage
+                jcr:primaryType="cq:Widget"
+                fieldLabel="Default News Image"
+                name="./newsImage"
+                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"/>
+            
+            <readMoreCTA
+                jcr:primaryType="cq:Widget"
+                fieldLabel="Read More CTA"
+                name="./readMoreCTA"
+                sling:resourceType="cq/gui/components/authoring/dialog/textfield"/>
+        </items>
+    </content>
+</dialog>
