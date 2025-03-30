@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.myTraining.core.schedulers.YellowWorldScheduler" activate="activate" deactivate="deactivate" modified="activate">
+  <property name="scheduler.expression" type="String" value="0 0/5 * * * ?"/>
+  <service>
+    <provide interface="java.lang.Runnable"/>
+  </service>
+  <implementation class="com.myTraining.core.schedulers.YellowWorldScheduler"/>
+</scr:component>

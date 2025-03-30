@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.myTraining.core.event.CustomEventHandler">
+  <property name="event.topics" type="String">org/apache/sling/api/resource/ResourceAdded
+org/apache/sling/api/resource/ResourceChanged
+org/apache/sling/api/resource/ResourceRemoved</property>
+  <service>
+    <provide interface="org.osgi.service.event.EventHandler"/>
+  </service>
+  <implementation class="com.myTraining.core.event.CustomEventHandler"/>
+</scr:component>
